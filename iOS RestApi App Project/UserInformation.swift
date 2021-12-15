@@ -1,5 +1,5 @@
 import Foundation
 
 struct ResponseData: Codable {
-    let test: String
+    let result: String
 }

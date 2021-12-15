@@ -37,13 +37,12 @@ class ViewController: UIViewController {
             self.view.endEditing(true)
         }
     }
+
     
-    // 로그인 화면으로 이동
-    private func showMainViewController() {
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let mainViewController = storyboard.instantiateViewController(identifier: "MainViewController")
-        mainViewController.modalPresentationStyle = .fullScreen
-        navigationController?.show(mainViewController, sender: nil)
+    // Segue로 데이터 전달
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let secondVC = segue.destination as? MainViewController else { return }
+        secondVC.data = self.idTextField.text
     }
     
     
@@ -67,12 +66,10 @@ class ViewController: UIViewController {
             let decoder = JSONDecoder()
             guard let json = try? decoder.decode(ResponseData.self, from: data) else { return }
             print(json)
-            
+
             DispatchQueue.main.async {
                 if let e = error {
                     self.errorMessageLabel.text = e.localizedDescription
-                } else {
-                    self.showMainViewController()
                 }
                 
             }

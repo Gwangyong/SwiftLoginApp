@@ -1,7 +1,7 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    
+    var data: String?
     
     @IBOutlet weak var welcomeLabel: UILabel!
     override func viewDidLoad() {
@@ -10,8 +10,9 @@ class MainViewController: UIViewController {
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         navigationController?.isNavigationBarHidden = true
         
+        guard let data = data else { return }
         welcomeLabel.text = """
-        님
+        \(data)님
         환영합니다.
         """
     }
