@@ -108,12 +108,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRP-pR-qAI">
+                                <rect key="frame" x="181" y="515.5" width="52" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="로그아웃">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutButton:" destination="xmq-sC-Nvv" eventType="touchUpInside" id="USv-Jq-cCh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pig-9G-v0W"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="D4Y-ww-5gD" firstAttribute="centerY" secondItem="pig-9G-v0W" secondAttribute="centerY" id="2Ff-PX-7bP"/>
+                            <constraint firstItem="QRP-pR-qAI" firstAttribute="top" secondItem="D4Y-ww-5gD" secondAttribute="bottom" constant="30" id="KQh-3o-83t"/>
                             <constraint firstItem="D4Y-ww-5gD" firstAttribute="centerX" secondItem="pig-9G-v0W" secondAttribute="centerX" id="RdF-12-WHK"/>
+                            <constraint firstItem="QRP-pR-qAI" firstAttribute="centerX" secondItem="pig-9G-v0W" secondAttribute="centerX" id="dXk-iK-C82"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TX6-dZ-Bot"/>

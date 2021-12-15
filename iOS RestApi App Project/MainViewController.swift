@@ -17,6 +17,9 @@ class MainViewController: UIViewController {
     }
     
     
+    @IBAction func logoutButton(_ sender: UIButton) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
 }
 
 
