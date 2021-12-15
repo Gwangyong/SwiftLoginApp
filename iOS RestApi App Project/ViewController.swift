@@ -35,27 +35,16 @@ class ViewController: UIViewController {
         if let id = self.idTextField.text, let password = self.passwordTextField.text {
             self.getUserInformation(id: id, password: password)
             self.view.endEditing(true)
-            
-            //            self.showMainViewController()
-            
-            
         }
     }
     
     // 로그인 화면으로 이동
-    //    private func showMainViewController() {
-    //        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-    //        let mainViewController = storyboard.instantiateViewController(identifier: "MainViewController")
-    //        mainViewController.modalPresentationStyle = .fullScreen
-    //        navigationController?.show(mainViewController, sender: nil)
-    //    }
-    
-    
-    
-    
-    
-    var userName: String?
-    
+    private func showMainViewController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let mainViewController = storyboard.instantiateViewController(identifier: "MainViewController")
+        mainViewController.modalPresentationStyle = .fullScreen
+        navigationController?.show(mainViewController, sender: nil)
+    }
     
     
     // MARK: - POST 요청으로 로그인 시도
@@ -73,27 +62,22 @@ class ViewController: UIViewController {
         
         URLSession.shared.dataTask(with: request) { data, response, error in
             
-            if let e = error {
-                NSLog("An error has occurred: \(e.localizedDescription)")
-            }
-            
             guard let data = data else { return }
             
             let decoder = JSONDecoder()
             guard let json = try? decoder.decode(ResponseData.self, from: data) else { return }
             print(json)
             
-            
-
-            
+            DispatchQueue.main.async {
+                if let e = error {
+                    self.errorMessageLabel.text = e.localizedDescription
+                } else {
+                    self.showMainViewController()
+                }
+                
+            }
             
         }.resume()
-    }
-    
-    //
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let secondViewController = segue.destination as? MainViewController else { return }
-        secondViewController.data = idTextField.text
     }
     
 }
@@ -113,4 +97,3 @@ extension ViewController: UITextFieldDelegate {
         loginButton.isEnabled = !isEmailEmpty && !isPasswordEmpty
     }
 }
-

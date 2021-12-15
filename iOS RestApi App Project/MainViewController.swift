@@ -1,8 +1,8 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    var data: String?
-
+    
+    
     @IBOutlet weak var welcomeLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -11,7 +11,7 @@ class MainViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
         
         welcomeLabel.text = """
-        \(self.data!)님
+        님
         환영합니다.
         """
     }
