@@ -15,6 +15,7 @@
 		79736F4C276094F500BEEC65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79736F4A276094F500BEEC65 /* Main.storyboard */; };
 		79736F4E276094F600BEEC65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79736F4D276094F600BEEC65 /* Assets.xcassets */; };
 		79736F51276094F600BEEC65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79736F4F276094F600BEEC65 /* LaunchScreen.storyboard */; };
+		7988F977276B3B2D004ABCC3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7988F976276B3B2D004ABCC3 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		79736F4D276094F600BEEC65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79736F50276094F600BEEC65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79736F52276094F600BEEC65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7988F976276B3B2D004ABCC3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				795322732760AFD800F855B7 /* UserInformation.swift */,
 				79532275276331E900F855B7 /* MainViewController.swift */,
 				79736F4A276094F500BEEC65 /* Main.storyboard */,
+				7988F976276B3B2D004ABCC3 /* SignUpViewController.swift */,
 				79736F4D276094F600BEEC65 /* Assets.xcassets */,
 				79736F4F276094F600BEEC65 /* LaunchScreen.storyboard */,
 				79736F52276094F600BEEC65 /* Info.plist */,
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7988F977276B3B2D004ABCC3 /* SignUpViewController.swift in Sources */,
 				79736F49276094F500BEEC65 /* ViewController.swift in Sources */,
 				795322742760AFD800F855B7 /* UserInformation.swift in Sources */,
 				79736F45276094F500BEEC65 /* AppDelegate.swift in Sources */,
