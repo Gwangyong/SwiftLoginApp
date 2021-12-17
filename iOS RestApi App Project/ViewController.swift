@@ -43,6 +43,8 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let secondVC = segue.destination as? MainViewController else { return }
         secondVC.data = self.idTextField.text
+        self.idTextField.text = "학번"
+        self.passwordTextField.text = "비밀번호"
     }
     
     

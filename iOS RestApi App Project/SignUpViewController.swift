@@ -11,6 +11,7 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.topItem?.title = ""
+        navigationController?.isNavigationBarHidden = false
         
         [signUpNameTextField, signUpIdTextField, signUpPasswordTextField, signUpVerifyPasswordTextField].forEach {
             $0?.layer.borderWidth = 1
