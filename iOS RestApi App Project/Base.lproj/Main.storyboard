@@ -73,6 +73,7 @@
                                     <color key="titleColor" systemColor="systemIndigoColor"/>
                                 </state>
                                 <connections>
+                                    <action selector="tapSignUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m3K-Ay-drm"/>
                                     <segue destination="hNV-5Q-4vB" kind="show" id="3b7-cI-iG2"/>
                                 </connections>
                             </button>

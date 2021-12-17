@@ -47,6 +47,11 @@ class ViewController: UIViewController {
         self.passwordTextField.text = "비밀번호"
     }
     
+    @IBAction func tapSignUpButton(_ sender: UIButton) {
+        self.idTextField.text = "학번"
+        self.passwordTextField.text = "비밀번호"
+        self.view.endEditing(true)
+    }
     
     // MARK: - POST 요청으로 로그인 시도
     func getUserInformation(id: String, password: String) {
