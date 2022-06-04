@@ -62,13 +62,13 @@
 		79736F43276094F500BEEC65 /* iOS RestApi App Project */ = {
 			isa = PBXGroup;
 			children = (
-				79736F44276094F500BEEC65 /* AppDelegate.swift */,
-				79736F46276094F500BEEC65 /* SceneDelegate.swift */,
+				79736F4A276094F500BEEC65 /* Main.storyboard */,
 				79736F48276094F500BEEC65 /* ViewController.swift */,
 				795322732760AFD800F855B7 /* UserInformation.swift */,
 				79532275276331E900F855B7 /* MainViewController.swift */,
-				79736F4A276094F500BEEC65 /* Main.storyboard */,
 				7988F976276B3B2D004ABCC3 /* SignUpViewController.swift */,
+				79736F44276094F500BEEC65 /* AppDelegate.swift */,
+				79736F46276094F500BEEC65 /* SceneDelegate.swift */,
 				79736F4D276094F600BEEC65 /* Assets.xcassets */,
 				79736F4F276094F600BEEC65 /* LaunchScreen.storyboard */,
 				79736F52276094F600BEEC65 /* Info.plist */,
